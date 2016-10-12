@@ -1,0 +1,23 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.scss.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "modules/colors";
+
+// size
+$main-container-top-margin: 60px;
+
+
+.container-logged-in{
+  margin-top: $main-container-top-margin;
+
+  .sub-caption{
+    font-size: 21px;
+    color: $home-sub-heading;
+  }
+
+  .btn-xing-login{
+    margin-top: 28px;
+    padding: 20px 52px;
+  }
+}

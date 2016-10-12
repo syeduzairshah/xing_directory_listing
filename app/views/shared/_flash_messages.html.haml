@@ -1,0 +1,7 @@
+-unless flash.blank?
+  - flash.collect.each do |key, value|
+    - unless value.blank?
+      .alert{class: "alert-#{key}"}
+        = value
+        .clear
+

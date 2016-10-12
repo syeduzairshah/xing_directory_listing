@@ -1,0 +1,13 @@
+.row
+  .col-sm-12.text-center
+    / it will be used to display all flash messages
+    = render partial: 'shared/flash_messages'
+
+    .container-logged-in
+      %h1
+        = translate('home_page.main_heading')
+      %h2.sub-cation
+        = translate('home_page.sub_heading')
+
+      = link_to xing_authenticate_path, class: 'btn btn-primary btn-lg btn-xing-login' do
+        = translate('buttons.log_in')

@@ -1,0 +1,33 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container-contact-list{
+  .message-no-contact-list{
+    font-size: 21px;
+  }
+
+  .contact-thumb{
+    margin-bottom: 20px;
+    .img-profile{
+      margin: auto;
+    }
+    .txt-user-name{
+      font-size: 14px;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .txt-user-profession{
+      font-size: 11px;
+      color: #505050;
+    }
+  }
+
+  .btn-load-more{
+    padding: 10px 60px;
+    background: none;
+    border-radius: 50px;
+    color: black;
+  }
+
+}

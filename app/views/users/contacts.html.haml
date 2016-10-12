@@ -1,0 +1,30 @@
+- content_for :profile_section do
+  - unless @profile.blank?
+    = image_tag(@profile[:photo_urls][:size_48x48] ,class: 'img-rounded')
+    .txt-profile-name
+      = @profile[:display_name]
+
+.container-contact-list
+  .row
+    .col-sm-12
+      %h2
+        = "Contact List(#{@total})"
+  .row
+    - unless @contact_list.blank?
+      -  @contact_list.each do |contact|
+        .col-sm-2.text-center
+          .contact-thumb
+            = image_tag(contact[:photo_urls][:size_256x256] ,class: 'img-rounded img-responsive img-profile')
+            .txt-user-name.txt-center
+              = contact[:display_name]
+            .txt-user-profession.txt-center
+              = contact[:professional_experience][:primary_company][:name]
+      %br
+      - if @load_more
+        .row
+          .col-sm-12.text-center
+            = link_to translate('buttons.load_more'), "#{users_contacts_path}?page=#{@page}", class: 'btn btn-primary btn-load-more'
+    - else
+      .col-sm-6
+        %p.message-no-contact-list
+          = translate('messages.contact_list.no_contact_found')

@@ -1,0 +1,9 @@
+.navbar.navbar-default.navbar-static-top.navbar-top
+  .container
+    .row
+      .col-sm-4.col-xs-5
+        = link_to root_url, class: 'navbar-brand'  do
+          = image_tag('https://x1.xingassets.com/assets/xws/dev/brand-c9aba1415630ed457d4b35bfab515046acfb22d381265d9384239bb02ae6d3d4.svg')
+      .col-sm-2.col-sm-offset-6.text-center.col-xs-5.col-xs-offset-2
+        .container-profile
+          = yield :profile_section

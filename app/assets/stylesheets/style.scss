@@ -1,0 +1,10 @@
+@import "modules/colors";
+
+.navbar-top{
+  background: $top-nav-bar;
+  min-height: 101px;
+
+  .container-profile{
+    margin-top: 14px;
+  }
+}
